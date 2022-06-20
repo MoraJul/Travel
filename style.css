@@ -10,6 +10,17 @@ html {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.5s;
+  color: #ffffff;
+}
+a:hover {
+  color: #dfd0d0;
 }
 
 /* body ******************************************/
@@ -21,9 +32,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  fontfamily: "Aleo", serif;
+  font-family: "Aleo", serif;
   font-family: "Magra", sans-serif;
   font-family: "Red Hat Text", sans-serif;
+}
+
+.main-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* header ******************************************/
@@ -32,9 +49,11 @@ body {
   flex-direction: column;
   align-items: center;
   background-image: url("assets/img/image.jpg");
-  background-size: 1440px, 765px;
-  background-position: center;
-  width: 1440px;
+  /* background-size: 1440px, 765px;  */
+  background-size: 100%, 765px;
+  width: 100%;
+  background-repeat: no-repeat;
+  /* width: 1440px; */
   height: 765px;
 }
 
@@ -45,16 +64,12 @@ body {
   width: 100%;
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
-.header-main {
-  width: 1200px;
-}
+
 .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
   height: 90px;
 }
 
@@ -90,14 +105,7 @@ body {
   text-decoration: none;
 }
 
-a {
-  text-decoration: none;
-  transition: color 0.5s;
-  color: #ffffff;
-}
-a:hover {
-  color: #dfd0d0;
-}
+
 
 .button-logo {
   font-family: "Red Hat Text";
@@ -120,26 +128,13 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
+
 .section-preview {
-}
-
-.section-preview-item {
   display: flex;
-
   flex-direction: column;
   align-content: center;
-  height: 422px;
-  max-width: 1200px;
 }
 
-.section-preview-title {
-  font-family: "Aleo";
-  font-style: normal;
-  font-weight: 700;
-  line-height: 96px;
-  font-size: 40px;
-  margin: 0;
-}
 .section-preview-text {
   font-family: "Aleo";
   font-style: italic;
@@ -159,34 +154,45 @@ a:hover {
   color: #ffffff;
 }
 
-.section-preview-form-batton {
-  display: block;
-  width: 892px;
-  height: 95px;
-  border-radius: 16px;
+.section-preview-form {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.7);
+border-radius: 16px;
+}
 
+.section-preview-form-input {
+  display: block;
+  flex: 1;
+  height: 95px;
+  border:0;
   font-family: "Aleo";
   font-style: italic;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
   color: #f2785c;
+  background-color: transparent;
+  
+  margin-left: 10px;
+
 }
-.button-search {
-  width: 163px;
-  height: 32px;
+.section-preview-form-button {
   font-family: "Red Hat Text";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
   color: #ffffff;
-  
-  width: 228px;
+  width: 30%;
   height: 59px;
-  background: #0D606F;
-box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
-border-radius: 10px;
+  background: #0d606f;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  margin-right: 10px;
+
 }
 
 /* footer *****************************************/
